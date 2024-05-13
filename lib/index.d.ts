@@ -5,13 +5,13 @@ interface QrCodePixParams {
     city: string;
     name: string;
     value?: number;
-    transactionId?: string;
+    txId?: string;
     message?: string;
     cep?: string;
     currency?: number;
     countryCode?: string;
 }
-declare function QrCodePix({ version, key, city, name, value, message, cep, transactionId, currency, countryCode, }: QrCodePixParams): {
+declare function QrCodePix({ version, key, city, name, value, message, cep, txId, currency, countryCode, }: QrCodePixParams): {
     payload: () => string;
     base64: (options?: qrcode.QRCodeToDataURLOptions | undefined) => Promise<string>;
 };

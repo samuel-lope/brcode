@@ -8,7 +8,7 @@ interface QrCodePixParams {
     city: string;
     name: string;
     value?: number;
-    transactionId?: string;
+    txId?: string;
     message?: string;
     cep?: string;
     currency?: number;
@@ -23,7 +23,7 @@ function QrCodePix({
     value,
     message,
     cep,
-    transactionId = '***',
+    txId = '***',
     currency = 986,
     countryCode = 'BR',
 }: QrCodePixParams) {
@@ -43,7 +43,7 @@ function QrCodePix({
 
     number().nullable().positive('Value must be a positive number').validateSync(value);
 
-    string().max(25, 'transactionId: max 25 characters').nullable().validateSync(transactionId);
+    string().max(25, 'transactionId: max 25 characters').nullable().validateSync(txId);
 
     const payloadKeyString = generateKey(key, message);
 
@@ -78,7 +78,7 @@ function QrCodePix({
         payload.push(genEMV('61', cep));
     }
 
-    payload.push(genEMV('62', genEMV('05', transactionId)));
+    payload.push(genEMV('62', genEMV('05', txId)));
 
     payload.push('6304');
 

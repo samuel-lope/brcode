@@ -2,17 +2,18 @@ import { QrCodePix } from '../src';
 
 const qrCodePix = QrCodePix({
     version: '01',
-    key: 'test@mail.com.br', //or any PIX key
-    name: 'Fulano de Tal',
-    city: 'SAO PAULO',
-    transactionId: 'YOUR_TRANSACTION_ID',
-    message: 'Pay me :)',
-    cep: '99999999',
-    value: 150.99,
+    key: 'pix.efi@sa.arq.br', //or any PIX key
+    name: 'SAMUEL LOPES',
+    city: 'BRASILIA',
+    txId: '--wd10s1egpa--',
+    // message: 'Pay me :)',
+    // cep: '70000000',
+    // value: 150.99,
 });
 
 console.log(qrCodePix.payload());
 
 qrCodePix.base64().then((res) => {
-    console.log(res);
+    const ImgBase64 = res;
+    console.log(ImgBase64);
 });

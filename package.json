@@ -12,6 +12,7 @@
     "dependencies": {
         "crc": "^4.1.1",
         "qrcode": "^1.5.0",
+        "qrcode-pix": "5.0.0",
         "yup": "^0.32.11"
     },
     "scripts": {

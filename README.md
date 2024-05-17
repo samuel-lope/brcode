@@ -2,6 +2,8 @@
 
 [![badge-tests](https://github.com/joseviniciusnunes/qrcode-pix/workflows/Tests/badge.svg)](https://github.com/joseviniciusnunes/qrcode-pix/actions)
 [![npm-version](https://img.shields.io/npm/v/qrcode-pix?color=brightgreen&label=npm%20package)](https://www.npmjs.com/package/qrcode-pix)
+![GitHub last commit](https://img.shields.io/github/last-commit/samuel-lope/brcode)
+
 
 ---
 
